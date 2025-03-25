@@ -1,0 +1,20 @@
+name: ros-l3
+
+topology:
+  defaults:
+    kind: mikrotik_ros
+
+  kinds:
+    mikrotik_ros:
+      image: craigbruenderman/routeros:7.18.2
+
+  nodes:
+    r1:
+      kind: mikrotik_ros
+      #startup-config: config/config_switch.txt
+    r2:
+      kind: mikrotik_ros
+      #startup-config: config/config_switch.txt
+      
+  #links:
+    #    - endpoints: ["srl:e1-1", "ceos:eth1"]
