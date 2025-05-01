@@ -1,0 +1,20 @@
+name: ros-l3
+
+topology:
+  defaults:
+    kind: mikrotik_ros
+
+  kinds:
+    mikrotik_ros:
+      image: vrnetlab/mikrotik_routeros:7.18.2
+
+  nodes:
+    r1:
+      kind: mikrotik_ros
+      #startup-config: config/config_switch.txt
+    r2:
+      kind: mikrotik_ros
+      #startup-config: config/config_switch.txt
+      
+  links:
+    - endpoints: ["r1:ether2", "r2:ether2"]

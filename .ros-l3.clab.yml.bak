@@ -6,7 +6,7 @@ topology:
 
   kinds:
     mikrotik_ros:
-      image: craigbruenderman/routeros:7.18.2
+      image: vrnetlab/mikrotik_routeros:7.18.2
 
   nodes:
     r1:
@@ -16,5 +16,5 @@ topology:
       kind: mikrotik_ros
       #startup-config: config/config_switch.txt
       
-  #links:
-    #    - endpoints: ["srl:e1-1", "ceos:eth1"]
+  links:
+    - endpoints: ["r1:ether2", "r2:ether2"]
